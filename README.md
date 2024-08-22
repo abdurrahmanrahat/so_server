@@ -5,7 +5,7 @@
 1. Clone the repository.
 2. Install dependencies using `npm install`.
 3. Rename `.env.example` to `.env`.
-4. Run the server using `npm run dev`.
+4. Run the server using `npm run start:dev`.
 
 ## Configuration:
 
@@ -19,40 +19,34 @@
 
 - API Endpoints:
 
-  - POST `/api/v1/auth/login`
+  - POST `/api/v1/students/registration`
 
-    - Description: Authenticates user and returns a JWT token.
+    - Description: Register student in School Online.
     - Request:
+
       ```json
       {
-        "email": "example@email.com",
-        "password": "password"
+        "firstName": "John",
+        "lastName": "Doe",
+        "dateOfBirth": "1995-05-15",
+        "gender": "male",
+        "email": "johndoe@example.com",
+        "contactNumber": "1234567890",
+        "address": "123 Main Street, City, Country",
+        "guardian": {
+          "fatherName": "John Doe Sr.",
+          "motherName": "Jane Doe",
+          "guardianContactNumber": "9876543210"
+        }
       }
       ```
+
     - Response:
       ```json
       {
         "success": true,
-        "message": "User registered successfully"
-      }
-      ```
-
-  - POST `/api/v1/users/register`
-    - Description: Registers a new user.
-    - Request:
-      ```json
-      {
-        "name": "John",
-        "email": "example@email.com",
-        "password": "password"
-      }
-      ```
-    - Response:
-      ```json
-      {
-        "success": true,
-        "message": "Login successful",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBoMkBleGFtcGxlLmNvbSIsImlhdCI6MTcwNzg1MDYyMSwiZXhwIjoxNzA3OTM3MDIxfQ.7EahSgmPLPNuZ_T9ok-B6TayWCJVdxPzi_Nx4UfrhvY"
+        "message": "User registered successfully",
+        "data": {}
       }
       ```
 
@@ -61,8 +55,6 @@
 - `express`: Web framework for Node.js.
 - `mongoose`: mongodb object modeling for node.js.
 - `mongodb`: MongoDB driver for Node.js.
-- `bcrypt`: Library for hashing passwords.
 - `cors`: Express middleware for enabling CORS.
 - `dotenv`: Loads environment variables from .env file.
-- `jsonwebtoken`: Library for generating and verifying JWT tokens.
 - `nodemon`: Utility for automatically restarting the server during development.

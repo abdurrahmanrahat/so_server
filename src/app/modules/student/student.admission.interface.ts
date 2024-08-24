@@ -10,5 +10,21 @@ export type TStudent = {
     fatherName: string;
     motherName: string;
     guardianContactNumber: string;
+    yearlyIncome: string;
   };
+  presentAddress: {
+    division: string;
+    district: string;
+    address: string;
+  };
+  permanentAddress: {
+    division: string;
+    district: string;
+    address: string;
+  };
+  religion: string;
+  nationality: string;
+  identity: string;
+  bloodGroup: string;
+  maritalStatus: 'single' | 'married';
 };

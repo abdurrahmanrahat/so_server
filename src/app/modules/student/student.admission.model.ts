@@ -13,7 +13,23 @@ const studentSchema = new Schema<TStudent>({
     fatherName: { type: String, required: true },
     motherName: { type: String, required: true },
     guardianContactNumber: { type: String, required: true },
+    yearlyIncome: { type: String, required: true },
   },
+  presentAddress: {
+    division: { type: String, required: true },
+    district: { type: String, required: true },
+    address: { type: String, required: true },
+  },
+  permanentAddress: {
+    division: { type: String, required: true },
+    district: { type: String, required: true },
+    address: { type: String, required: true },
+  },
+  religion: { type: String, required: true },
+  nationality: { type: String, required: true },
+  identity: { type: String, required: true },
+  bloodGroup: { type: String, required: true },
+  maritalStatus: { type: String, enum: ['single', 'married'] },
 });
 
 // model

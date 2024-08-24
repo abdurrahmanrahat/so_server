@@ -13,7 +13,23 @@ const createStudentValidationSchema = z.object({
       fatherName: z.string(),
       motherName: z.string(),
       guardianContactNumber: z.string(),
+      yearlyIncome: z.string(),
     }),
+    presentAddress: z.object({
+      division: z.string(),
+      district: z.string(),
+      address: z.string(),
+    }),
+    permanentAddress: z.object({
+      division: z.string(),
+      district: z.string(),
+      address: z.string(),
+    }),
+    religion: z.string(),
+    nationality: z.string(),
+    identity: z.string(),
+    bloodGroup: z.string(),
+    maritalStatus: z.enum(['single', 'married']),
   }),
 });
 

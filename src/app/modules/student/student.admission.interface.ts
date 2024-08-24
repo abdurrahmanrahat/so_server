@@ -5,7 +5,6 @@ export type TStudent = {
   gender: 'male' | 'female' | 'others';
   email: string;
   contactNumber: string;
-  address: string;
   guardian: {
     fatherName: string;
     motherName: string;

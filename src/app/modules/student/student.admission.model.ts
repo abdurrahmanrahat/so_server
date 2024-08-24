@@ -8,7 +8,6 @@ const studentSchema = new Schema<TStudent>({
   gender: { type: String, enum: ['male', 'female', 'others'] },
   email: { type: String, required: true },
   contactNumber: { type: String, required: true },
-  address: { type: String, required: true },
   guardian: {
     fatherName: { type: String, required: true },
     motherName: { type: String, required: true },

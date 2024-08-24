@@ -8,7 +8,6 @@ const createStudentValidationSchema = z.object({
     gender: z.enum(['male', 'female', 'others']),
     email: z.string().email(),
     contactNumber: z.string(),
-    address: z.string(),
     guardian: z.object({
       fatherName: z.string(),
       motherName: z.string(),
